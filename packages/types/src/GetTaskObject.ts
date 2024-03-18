@@ -1,7 +1,4 @@
-export type PostFormObject = {
-  title: string;
-  description: string;
-};
+import type { TaskTextData } from "./RequestData";
 
 export type GetTaskObject = {
   createdAt: string;
@@ -9,4 +6,4 @@ export type GetTaskObject = {
   completedAt: string;
   id: string;
   isEditing: boolean;
-} & PostFormObject;
+} & TaskTextData;

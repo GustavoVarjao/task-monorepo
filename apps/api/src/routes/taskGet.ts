@@ -1,20 +1,20 @@
-import type { FastifyReply, FastifyRequest } from 'fastify';
-import type { RequestGetQuery } from '../model/RequestData';
-import { TaskModel } from '../model/Task';
+import type { FastifyReply, FastifyRequest } from "fastify";
+import type { RequestGetQuery } from "@repo/types";
+import { TaskModel } from "../model/Task";
 
 export const taskGet = async (
   request: FastifyRequest<{
     Querystring: RequestGetQuery;
   }>,
-  reply: FastifyReply,
+  reply: FastifyReply
 ) => {
   const { search } = request.query;
 
   if (search) {
     const tasks = await TaskModel.find({
       $or: [
-        { title: { $regex: search, $options: 'i' } },
-        { description: { $regex: search, $options: 'i' } },
+        { title: { $regex: search, $options: "i" } },
+        { description: { $regex: search, $options: "i" } },
       ],
     }).exec();
 

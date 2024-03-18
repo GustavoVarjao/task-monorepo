@@ -1,10 +1,10 @@
-import type { UrlData } from '../models/RequestData';
+import type { UrlData } from "@repo/types";
 
 export const urlModifier = (
   { id, searchTerm }: UrlData,
-  isPatch?: boolean,
+  isPatch?: boolean
 ): string => {
-  let url = 'http://localhost:3333/tasks';
+  let url = "http://localhost:3333/tasks";
 
   if (id) {
     url = `${url}/${id}`;

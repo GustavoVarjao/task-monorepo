@@ -11,6 +11,9 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:packages/eslint-config
+      '@repo/types':
+        specifier: workspace:*
+        version: link:packages/types
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:packages/typescript-config
@@ -39,6 +42,9 @@ importers:
       '@antfu/eslint-config':
         specifier: 1.0.0-beta.27
         version: 1.0.0-beta.27(eslint@8.57.0)(typescript@5.3.3)
+      '@repo/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       '@types/node':
         specifier: ^20.8.7
         version: 20.11.24
@@ -73,6 +79,9 @@ importers:
         specifier: ^3.4.21
         version: 3.4.21(typescript@5.3.3)
     devDependencies:
+      '@repo/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
         version: 5.0.4(vite@5.1.6)(vue@3.4.21)
@@ -118,6 +127,12 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
+
+  packages/types:
+    devDependencies:
+      typescript:
+        specifier: ^5.4.2
+        version: 5.4.2
 
   packages/typescript-config: {}
 
@@ -5821,6 +5836,12 @@ packages:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
+
+  /typescript@5.4.2:
+    resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
 
   /ufo@1.5.1:
     resolution: {integrity: sha512-HGyF79+/qZ4soRvM+nHERR2pJ3VXDZ/8sL1uLahdgEDf580NkgiWOxLk33FetExqOWp352JZRsgXbG/4MaGOSg==}

@@ -1,13 +1,13 @@
-import type { FastifyReply, FastifyRequest } from 'fastify';
-import { v4 as uuidV4 } from 'uuid';
-import type { RequestBody } from '../model/RequestData';
-import { TaskModel } from '../model/Task';
+import type { FastifyReply, FastifyRequest } from "fastify";
+import { v4 as uuidV4 } from "uuid";
+import type { RequestBody } from "@repo/types";
+import { TaskModel } from "../model/Task";
 
 export const taskPost = async (
   request: FastifyRequest<{
     Body: RequestBody;
   }>,
-  reply: FastifyReply,
+  reply: FastifyReply
 ) => {
   const { title, description, createdAt } = request.body;
 

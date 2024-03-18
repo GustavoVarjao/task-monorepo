@@ -1,8 +1,8 @@
 import { ofetch } from "ofetch";
 import { format } from "date-fns";
 import { ref } from "vue";
-import type { RequestData } from "../models/RequestData";
-import type { GetTaskObject } from "../models/TaskObject";
+import type { RequestData } from "@repo/types";
+import type { GetTaskObject } from "@repo/types";
 import { urlModifier } from "../utils/urlModifier";
 
 export const taskData = ref<GetTaskObject[]>([]);
