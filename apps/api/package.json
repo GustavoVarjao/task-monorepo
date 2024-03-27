@@ -8,7 +8,7 @@
   "keywords": [],
   "main": "test.js",
   "scripts": {
-    "dev": "tsx watch --env-file=.env src/app.ts",
+    "dev": "dotenv -e .env -- tsx watch src/app.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "fmt": "prettier --write \"**/*.{ts,vue,css,html}\""
@@ -25,6 +25,7 @@
     "@types/eslint": "^8.56.6",
     "@types/node": "^20.8.7",
     "@types/uuid": "^9.0.6",
+    "dotenv-cli": "^7.4.1",
     "eslint": "^8.57.0",
     "pino-pretty": "^10.2.3",
     "prettier": "^3.0.3",

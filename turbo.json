@@ -11,7 +11,9 @@
     },
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "dotEnv": [".env"],
+      "env": ["CONNECTION_URL"]
     }
   }
 }
