@@ -21,10 +21,17 @@ function modalSwitch() {
       <SearchBox />
     </div>
     <Tasks />
-    <Modal v-show="isOpen" @close-modal="modalSwitch" />
-    <button class="fixed bottom-5 right-5 grid h-20 w-20 place-content-center rounded-full bg-green text-8xl text-white"
-      @click="modalSwitch()">
-      <p class="mb-3">+</p>
+    <Modal
+      v-show="isOpen"
+      @close-modal="modalSwitch"
+    />
+    <button
+      class="fixed bottom-5 right-5 grid h-20 w-20 place-content-center rounded-full bg-green text-8xl text-white"
+      @click="modalSwitch()"
+    >
+      <p class="mb-3">
+        +
+      </p>
     </button>
   </div>
 </template>

@@ -44,7 +44,9 @@ function sendPostForm() {
     class="fixed left-0 top-0 z-10 grid h-screen w-screen place-content-center bg-black bg-opacity-60"
   >
     <div class="h-112 w-128 rounded-lg bg-dark-gray text-center">
-      <h1 class="m-5 text-3xl font-bold text-white">CRIAR TAREFA</h1>
+      <h1 class="m-5 text-3xl font-bold text-white">
+        CRIAR TAREFA
+      </h1>
       <form
         method="post"
         @submit.prevent="sendPostForm"
@@ -55,7 +57,7 @@ function sendPostForm() {
           type="text"
           placeholder="nome"
           class="mt-5 h-10 w-3/4 rounded-full bg-gray p-1 pl-4 text-white focus:outline-none"
-        />
+        >
         <textarea
           v-model="postForm.description"
           rows="6"
@@ -63,7 +65,10 @@ function sendPostForm() {
           placeholder="descrição"
           class="mt-5 w-3/4 resize-none rounded-3xl bg-gray p-1 pl-4 pt-3 text-white focus:outline-none"
         />
-        <p v-show="isInputEmpty" class="text-lg text-red">
+        <p
+          v-show="isInputEmpty"
+          class="text-lg text-red"
+        >
           OS DOIS CAMPOS SÃO OBRIGATÓRIOS
         </p>
         <div class="mx-auto my-10 flex h-10 w-3/4 justify-between">

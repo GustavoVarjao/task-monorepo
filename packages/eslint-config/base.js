@@ -8,6 +8,7 @@ module.exports = {
   env: {
     node: true,
   },
+
   settings: {
     "import/resolver": {
       typescript: {
@@ -20,5 +21,4 @@ module.exports = {
     ".*.js",
     "node_modules/",
   ],
-  overrides: [{ files: ["*.js?(x)", "*.ts?(x)"] }],
 };

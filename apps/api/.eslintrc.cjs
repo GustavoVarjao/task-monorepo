@@ -2,6 +2,4 @@
 module.exports = {
   root: true,
   extends: ["@repo/eslint-config/api.js"],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {},
 };
